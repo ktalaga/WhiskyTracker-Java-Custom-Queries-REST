@@ -15,10 +15,10 @@ public class Whisky {
     @Column(name = "name")
     private String name;
 
-    @Column(name = "year")
+    @Column(name = "age")
     private int year;
 
-    @Column(name = "age")
+    @Column(name = "year")
     private int age;
 
     @JsonIgnoreProperties({"whiskies"})
