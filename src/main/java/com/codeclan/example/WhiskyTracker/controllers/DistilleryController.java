@@ -29,5 +29,11 @@ public class DistilleryController {
         return new ResponseEntity<List<Distillery>>(distilleryRepository.findByRegion(region), HttpStatus.OK);
     }
 
+    @GetMapping(value = "/distilleries/whisky/age")
+    public ResponseEntity<List<Distillery>> findDistilleriesByWhiskyAge(
+            @RequestParam(name = "whiskyAge") int whiskyAge
+    ){
+        return new ResponseEntity<>(distilleryRepository.findByWhiskiesYear(whiskyAge), HttpStatus.OK);
+    }
 
 }
